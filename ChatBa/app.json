@@ -1,0 +1,54 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/list/list",
+    "pages/spdetail/spdetail",
+    "pages/cart/cart",
+    "pages/pay/pay"
+  ],
+  "window":{
+    "backgroundTextStyle":"white",
+    "navigationBarBackgroundColor": "#69c3aa",
+    "navigationBarTitleText": "shop",
+    "navigationBarTextStyle":"#fbf9fe"
+  },
+
+"tabBar": {
+        "color": "#929292",
+        "backgroundColor": "#ffffff",
+        "selectedColor": "#69C3AA",
+        "borderStyle": "white",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "image/shouye1.png",
+                "selectedIconPath": "image/shouye.png"
+            },
+            {
+                "pagePath": "pages/list/list",
+                "text": "商品列表",
+                "iconPath": "image/huodong1.png",
+                "selectedIconPath": "image/huodong.png"
+            },
+            {
+                "pagePath": "pages/spdetail/spdetail",
+                "text": "详情",
+                "iconPath": "image/car1.png",
+                "selectedIconPath": "image/car.png"
+            },
+            {
+                "pagePath": "pages/cart/cart",
+                "text": "购物车",
+                "iconPath": "image/wode1.png",
+                "selectedIconPath": "image/wode.png"
+            },
+            {
+                "pagePath": "pages/pay/pay",
+                "text": "支付",
+                "iconPath": "image/wode1.png",
+                "selectedIconPath": "image/wode.png"
+            }
+        ]
+    }
+}

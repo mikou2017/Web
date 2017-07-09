@@ -1,0 +1,10 @@
+<view>
+  <view class="singal_item" wx:for="{{itemArray}}">
+    <view class="singal_item_title">
+      <text>{{item.itemText}}</text>
+    </view>
+    <view class="singal_item_image">
+      <image bindload="cusImageLoad" src="{{item.itemUrl}}" style="width: {{imageWidth}};height: {{imageHeight}}"></image>
+    </view>
+  </view>
+</view>
