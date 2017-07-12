@@ -1,0 +1,38 @@
+/*
+* @Author: l
+* @Date:   2017-07-06 20:00:24
+* @Last Modified by:   l
+* @Last Modified time: 2017-07-06 20:18:01
+*/
+/* 最外层的容器 */
+.jd_container{
+    width: 100%;
+}
+
+/* 顶部的通栏 */
+.jd_header{
+    height: 40px;
+    width: 100%;
+    background-color: rgb(201,21,35);
+    position: relative;
+}
+.jd_header .header_logo{
+    width: 60px;
+    height: 36px;
+    position:absolute;
+    left: 5px;
+    top:2px;
+    background-image: url('../img/sprites.png');
+    background-repeat: no-repeat;
+    background-position: 0 -103px;
+
+}
+.jd_header .header_glass{
+
+}
+.jd_header .header_search{
+
+}
+.jd_header .header_login{
+
+}

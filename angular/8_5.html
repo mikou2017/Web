@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<body ng-app="App">
+
+
+<div ng-controller="StarController">
+    <button ng-click="getData()">获取数据</button>
+    <table>
+        <tr>
+            <td>姓名</td>
+            <td>年龄</td>
+            <td>性别</td>
+            <td>头像</td>
+            <td>专辑</td>
+
+        </tr>
+        <tr ng-repeat="star in starts">
+            <td>{{star.name}}</td>
+            <td>{{star.age}}</td>
+            <td>{{star.sex}}</td>
+            <td>{{star.photo}}</td>
+            <td>{{star.ablum}}</td>
+
+        </tr>
+    </table>
+
+</div>
+
+<script src="css/angular.min.js"></script>
+<script>
+var App=angular.module('App',[]);
+App.controller('StarController',['$http','$scope','$log',function($http,$scope,$log){
+
+            $scope.getData=function(){
+                //
+                $http({
+                    url:'./php/starts.php',
+                    method:'get'
+
+                }).success(function(info){
+                    $log.info(info);
+                    $scope.starts=info;
+                });
+            }
+}]);
+
+
+</script>
+</body>
+</html>
