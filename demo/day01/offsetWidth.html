@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style>
+    div{
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        border: 10px solid pink;
+        margin: 30px;
+        background: #ccc;
+    }
+</style>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        var div=document.getElementsByTagName("div")[0];
+        //offsetHeight和offsetWidth: 可以检测盒子的宽高。
+    //包括宽高本身，padding，border。不包括margin
+        console.log(div.offsetHeight);
+        console.log(div.offsetWidth);
+//offsetHeight = height+padding+border;(不加margin)
+    //offsetWidth = width+padding+border;(不加margin)
+    console.log(typeof div.offsetHeight);//number
+    </script>
+</body>
+</html>

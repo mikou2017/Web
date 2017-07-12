@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<div >jsJsop</div>
+<input type="button" id='jsJsop' value="jsJsop">
+</body>
+</html>
+<script type="text/javascript" src='js/jquery-2.2.0.js'></script>
+<script type="text/javascript">
+function myJsonpCallback(data){
+    console.log(data);
+}
+$(function(){
+    //不要忘记写id
+    $("#jsJsop").on('click',function(){
+        //使用jq发送jsonp
+        $.ajax({
+            url:'xxx.php',
+            dataType:'jsonp',
+            success:function(data){
+                console.log(data);
+            },
+            jsonpCallback:"myJsonpCallback"
+        });
+    })
+})
+
+
+</script>
+

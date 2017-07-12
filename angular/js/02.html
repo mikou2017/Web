@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<p>//实参：就是函数调用的时候，实际传入的参数</p>
+<p> //形参：函数声明的时候，用来站位的变量名，没有具体的数值</p>
+<p>//在函数调用时，会默认的将实参赋值给形参</p>
+
+
+
+
+
+<script>
+var num=10;
+function change(num1){
+    num1=100;
+
+}
+change(num);
+console.log(num);
+function jinhua(param){
+        //param = obj
+        param.name = "高富帅";
+        //下面的这句代码，重新创建了一个对象，修改了param的指向
+        //但是，obj还指向原来的那个对象 所以，在修改param的时候，修改的是
+        //新创建的对象，跟obj没有关系
+        param = {
+            name:"腐女"
+        };
+        param.name = "宅男";
+    }
+
+    jinhua(obj);
+
+    console.log(obj.name); //高富帅 or  宅男 or  腐女
+
+    //值类型做函数的参数
+    //函数内部的变量，也就是形参和实参只是简单的赋值操作，两个数据独立存储于内存中的
+    //在函数内部对形参进行修改，不会影响外面的变量
+
+    //引用类型做函数的参数
+    //还是把实参存储的地址赋值给了形参，在函数内部，形参同样也指向该对象，
+    //所以，在函数内部对该对象进行修改，会影响到外面的变量
+
+    //注意：如果在函数内部重新创建对象，为该形参赋值，那么两个对象将不再有关系
+    //修改其中一个，另外一个不受影响
+
+
+
+
+
+
+
+
+
+    var str="你是天边最美的云彩";
+    var str1=str;
+    str="高飞";
+    console.log(str1);
+    var num1=110;
+    var num2=null;
+    num1=119;
+    console.log(num2);
+//值类型的赋值
+    //直接将存储的数据复制一份进行赋值，两份数据在内存中是完全独立的
+var p1={
+    name:"郭富成",
+    age:60
+}
+var p2=p1;
+p1.name="潘明";
+p1.age=16;
+console.log(p2.name,p2.age)
+
+//函数声明
+function FunctionName(){
+    //函数体
+}
+ //2.函数表达式
+        //在使用函数表达式声明函数的时候，function后面可以跟函数名
+        //但是 这个函数名。只限在函数内部使
+
+var functionName1=function name(){
+    console.log("谁说的");
+}
+var functionName2=new Function();
+functionName1();
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

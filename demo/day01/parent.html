@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>parent</title>
+</head>
+<body>
+<div class="box1" style="position:absolute;">
+    <div class="box2" style="position:fixed;">
+        <div class="box3"></div>
+    </div>
+</div>
+<script>
+    var box3=document.getElementsByClassName("box3")[0];
+    //offsetParent：复习盒子中带有定位的盒子
+    //复习盒子中都没有定位，返回body
+    //如果有，谁有返回最近哪个box2
+    console.log(box3.offsetParent);
+</script>
+</body>
+</html>
